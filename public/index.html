@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tathya</title>
+
+    <link rel="shortcut icon" href = "images/tathya_icon.jpg">
+   
+    <script type="text/javascript" src="javascripts/script.js"></script>
+    <script src = "javascripts/search_script.js" ></script> 
+    <script src = "javascripts/profile_script.js" ></script>  
+    <script src = "javascripts/http_requests.js" ></script>  
+    <script src = "javascripts/refresh_script.js" ></script> 
+    <script src = "javascripts/cookie_script.js" ></script> 
+    <script src = "javascripts/validation.js" ></script> 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+</head>
+    
+<body onload = "decideEndPoint()" onkeyup = "keyEvent(event)">
+        <div id="header" class = "head" >
+            <span id="iconspan">
+            <i id = "icon" class="mdi-action-search small"></i>
+            </span>
+            <span id="searchspan">
+            <input id="search_textbox" type="text" class="validate" placeholder = "search">
+            </span>    
+            <span id="preloader">
+                <div class="preloader-wrapper small active">
+                    <div class="spinner-layer spinner-blue">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="spinner-layer spinner-red">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="spinner-layer spinner-yellow">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="spinner-layer spinner-green">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </span>
+            <img class = "circle tooltipped" data-position = "bottom" data-tooltip = "Profile" data-delay = "2" id = "dp" style="cursor:pointer" onclick = "toggleSlider(this)">
+            <a class="waves-effect waves-light btn tooltipped" data-position = "bottom" data-tooltip = "Google+" data-delay = "2" id="signin" onclick = "login()">Sign in</a>
+            <a class="waves-effect waves-light btn" id="signout" onclick="deletecookie()">Sign out</a>
+        </div>
+        <div id="mainArea">
+            <div id="workingArea">
+                <h1 id="title">
+                    tathya
+                </h1>
+                <div id="subtitle">
+                    Read &nbsp;&nbsp;Share &nbsp;&nbsp;Collaborate
+                </div>
+                <div id = "FeaturesArea">
+                    <div class="slider" >
+                        <ul class="slides">
+                            <li>
+                                <div class="center-align row">
+                                   <div class = "col s5" id = "search_content">
+                                       <h3>A Better Search Experience</h3>
+                                       <p>Relevent search results</p>
+                                       <p>User generated resources</p>
+                                   </div>
+                                   <img src="images/what-you-want.jpg" id = "slide_image1" class = "col s7 ">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="center-align row">
+                                    <div class = "col s5" id = "share_content">
+                                           <h3>Share knowledge</h3>
+                                           <p>Save peer time</p>
+                                           <p>Upload standard resources</p>
+                                           <p>Tag it</p>
+                                    </div>
+                                    <img src="images/sharing.png" id = "slide_image2" class = "col s7">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="center-align row">
+                                    <div class = "col s5" id = "account_content">
+                                        <h3>Your own account</h3>
+                                        <p>Have your own set of URLs</p>
+                                        <p>Manage your account</p>
+                                    </div>
+                                    <img src="images/collection1.jpg" id = "slide_image3" class = "col s7">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div id="DownloadArea" >
+                    <div id="Link"><br><br><br><br>
+                        <img src="images/image.jpg" style="float:left;margin-right:3%;width:62%">
+                        <div>
+                        <span id = "dtxt">Save Time.</span><br>
+                        <span id = "dtxt">Share Knowledge.</span><br>
+                        <span id = "dtxt1">Choose Tathya.</span><br>
+                        <span class="dropbutton">
+                            <span class="red1" style="margin-left:7%;margin-top:3%;">
+                                <img src="images/239301-download_arrow-128.png" style="width:146%;height:100%:padding-right:30%;" />
+                            </span>
+                            <span class="blue" style="margin-top:3%;">
+                                <a href="#">Download</a>
+                            </span>
+                            <span class="light1">
+                                Special Offer <br />
+                                <span>25,99$</span>
+                            </span>
+                        </span>  
+                        </div>
+                    </div>
+                </div>
+
+                <div id="SupportArea" >
+                    <div id="Release_notes">
+                            <h5><u>Release Notes</u></h5><br>
+                        version 1.0.0<br>
+                        
+                        Current version of Tathya can be accessible only by the soliton employees<br>
+                        
+                        <h6><u>About tathya :</u></h6>
+                        
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tathya is Soliton’s Digital Library initiative to maintain an internal knowledge database and make it accessible to every Soliton.Tathya is here to help you out and let other Solitons get benefited from your files. It is in turn getting an advantage of any Soliton’s time spent on identifying appropriate resources for one's own training, development and work related stuff.<br><br>
+                        <h6><u>Features</u></h6>
+                        <ol>
+                            <li>Share resources with your collegues</li>
+                            <li>One click Webpage upload</li>
+                            <li>Save your precious time by avoiding useless webpages</li>
+                        </ol>
+                        <h6><u>Limitations</u></h6>
+                        <ol>
+                            <li>Webpage with no title tags in its page source can be added to tathya,but cannot be searched</li>
+                            <li>Plugin is Supported only in chrome(Website is cross-browser independent)</li>
+                            <li>Plugin and Website requires independant authentication</li>
+                            <li>Works only in online</li>
+                        </ol>
+                        <h6><u>Future Works</u></h6>
+                        <ol>
+                            <li>Developing plugin for mozilla and IE</li>
+                            <li>Improvised search results</li>
+                            <li>Upvote and Downvote to rate the webpages</li>
+                            <li>Extending the resources to pdf's,videos,images etc</li>
+                        </ol>     
+                    </div>
+                </div>
+                <div id="Usage_instruction">
+                    <h5><u>How To Use Tathya </u></h5><br>
+                     Here is a step by step instruction about how to use Tathya.<br><br>
+                    <h6><u><b>Sharing the webpage</b></u></h6><br>
+                    <b>Step 1 :</b>Download and install tathya plugin to your chrome browser from chrome store.<br>
+                    <b>Step 2 :</b>When you feel the current web page as a useful,crispy and worth sharing, just click on the Tathya plugin which is displayed on the top right corner of your chrome browser.<br>
+                    <b>Step 3 :</b>Tathya plugin provides suggestions about the web pages from which you are allowed to select or add tags, along with your web page.Your web page is now sucessfully shared with others.<br><br>
+                    <h6><u><b>Searching the webpage</b></u></h6><br>
+                    <b>Step 1 :</b>Go to Tathya website.Sign in using google account.<br>
+                    <b>Step 2 :</b>Search can be performed with tha help of textbox on the top-left of the webpage.<br>
+                    <b>Step 3 :</b>Results are displayed along with the google results.<br>
+                    <b>Step 4 :</b>Webpages uploaded by you can be viewed in Gallery page. Tags can be edited or URL can be removed from the same page itself.<br>
+                    <b>Step 5 :</b>User Activity is displayed in Activity log page.<br>
+                    <b>Step 6 :</b>Feed back can be posted in feedback page.<br>
+                    
+                </div>
+
+                <div id = "FeedbackArea">
+                    <input id="user_name" type="text" placeholder="Name"/><br><br>
+                    <textarea id="feedback" rows="15" cols="75" style="height:40%;width:70%;color:white" placeholder="Enter your Feedback"></textarea><br><br>
+                    <button class="btn" onclick="feedback()">SUBMIT</button><br><br>
+                    <label id="sent" style="float:center;display:none;color:white"></label>
+                </div>
+            </div>
+            <div id = "results">
+            </div>
+            <div id="sliderPane">
+                <div id="menuDisplay">
+                    <div id="Features" onclick="enablePage(this)">Features</div>
+                    <div id="Download" onclick="enablePage(this)">Download</div>
+                    <div id="Support" onclick="enablePage(this)">Release Notes</div>
+                    <div id="use" onclick="enablePage(this)">How to Use</div>
+                    <div id="Feedback" onclick="enablePage(this)">Feedback</div>
+                </div>
+                <div id="profileDisplay">
+                    <div id = "Profile" onclick = "viewProfile();">Profile</div>
+                    <div id = "History" onclick = "viewGallery();">My Gallery</div>
+                    <div id = "Activity" onclick = "viewLog();">Activity</div>
+                </div>
+            </div>
+            <a class="btn-floating btn-large waves-effect waves-light red tooltipped" data-position = "top" data-tooltip = "Menu" data-delay = "2" id="menu" onclick="toggleSlider(this)">
+                <i class="mdi-content-add"></i>
+            </a>
+        </div>
+        <div id="footer">
+            <div id="soliton">
+                A &nbsp;Soliton &nbsp;Initiative
+            </div>
+        </div>
+    <script type="text/javascript" src="javascripts/materialize.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="stylesheets/materialize.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="stylesheets/main.css" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Lora:700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arvo:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+    <script>
+        $(document).ready(function(){
+          $('.slider').slider({full_width: true});
+        });
+    </script>
+
+</body>
+</html>
