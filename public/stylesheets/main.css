@@ -1,0 +1,694 @@
+html, body{
+    height:100%;
+    width:100%;
+    margin:0px;
+    overflow-y: hidden;
+}
+
+body {
+    background-image:url('../images/books.jpg');
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+
+@font-face {
+    font-family: tathyaFont;
+    src: url(SAMARN__.TTF);
+}
+
+#layer1 {
+    width:inherit;
+    height: inherit;
+}
+
+.head {
+    background-color:rgba(215, 186, 174, 0.48);
+    height:12%;
+    border-bottom: 1px solid white;
+}
+
+.txt {
+    font-size: 4em;
+}
+#search_textbox {
+    width : 30%;
+   border:none;
+    outline: none;
+    font-size: 1em;
+    padding: 0;
+    border-bottom: 4px solid white;
+    text-decoration-color: white;
+    background-color: transparent;  
+}
+::-webkit-input-placeholder {
+    color: white;
+}
+#footer{
+    height: 3%;
+    width: 12%;
+}
+.contain {
+    text-align: left;
+    align-items: center;
+}
+#icon {
+    position: relative;
+    top: 15px;
+    margin-right: 1px;
+}
+#iconspan{
+    display: inline-block;
+  
+}
+.sign_logo,.sign_text{
+    display: inline-block;
+    height: 36px;
+}
+#preloader{
+    display: none;
+    position: relative;
+    top: 15px;
+    padding-left: 5px;
+}
+
+.header-display {
+    background-color: #4FC3F7;
+    height:12%;
+    border-bottom: 1px solid #1A237E;
+}
+#mainArea{
+    height:85%;
+    background-color: rgba(25, 37, 26, 0.40); 
+}
+#footer{
+    height:3%;
+    width: 100%;
+    background-color: rgba(25, 37, 26, 0.40);
+}
+
+#soliton{
+    font-family: 'Arvo', serif;
+    color: white;
+    margin-left: 7%;
+}
+
+#dp {
+    margin-top: 0.8%;
+    width : 6%;
+    height : 50%;
+    display: none;
+    padding-right: 2%;
+}
+
+
+#dp_in_profile {
+    width : 10%;
+    height: 70%;
+    margin: 2%;
+    position: relative;
+    background-color: transparent;
+}
+
+#container {
+    width: 70%;
+    height: 85%;
+    background-color: white;
+    align-self: center;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+#sub_container {
+    width: 70%;
+    height: 68%;
+    margin-left: 15%;
+    background-color: rgba(128, 128, 128, 0.2);
+    border: ridge 10px rgba(128, 128, 128, 0.3);
+    border-radius: 15px;
+}
+
+#profile_name {
+    font-family: 'Courgette', cursive;
+    color: rgba(32, 218, 242, 0.8);
+    padding-top: 3%;
+    padding-left: 3%;
+    font-size: 3.5em;
+    float: left;
+    margin: 1%;
+    text-transform: capitalize;
+    background-color: transparent;
+}
+#dp_with_name {
+    width: 100%;
+    height: 25%;
+    background-color: rgba(0, 0, 128,0.8);
+}
+
+#location, #dept, #job, #linkdin, #contact, #email {
+    border: none;
+    font-family: 'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman', serif;
+    border-bottom: 1px solid #bdbdbd;
+    background-color: rgba(128,128,128,0.4); 
+    color: black;
+    padding: 0px;
+    text-align: center;
+    overflow-x: hidden;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+#linkdin {
+    border-radius: 25px;
+    margin-left: 13.5%;
+}
+
+#location, #dept, #job, #contact {
+    text-transform: capitalize;
+}
+
+#location:hover, #dept:hover, #job:hover, #linkdin:hover, #contact:hover, #email:hover {
+    background-color: rgba(128,128,128,0.8);
+}
+
+#location:focus, #dept:focus, #job:focus, #linkdin:focus, #contact:focus, #email:focus {
+    border-bottom: 2px solid black;
+    background-color: inherit;
+}
+
+#save {
+    margin-right: 2%;
+}
+
+#email_btn, #loc_btn, #job_btn, #contact_btn, #dept_btn, #linkdin_btn {
+    background-color: rgba(128,128,128,0.7);
+    height: 34px;
+    margin-left: 10%;
+    display: inline-block;
+    padding:0 2rem 1em 2rem;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    
+}
+
+#email_btn, #loc_btn, #job_btn ,#linkdin_btn {
+    margin-left: 13%;
+}
+
+#contact_btn {
+    margin-left: 14%;
+}
+
+#linkdin_icon3 {
+    z-index: 15;
+}
+
+#email_icon, #loc_icon, #job_icon, #contact_icon, #dept_icon {
+    font-size: 1.1em;
+    padding-bottom: 1rem;    
+}
+
+#linkdin_icon {
+    height: 7%;
+    width: 15%;
+    margin-left: 4%;
+    cursor: pointer;
+}
+
+#linkdin_img {
+    cursor: pointer;
+}
+
+#results {
+    background-color: rgba(255,255,255,0.8);
+    display: block;
+    float: left;
+    height: 100%;
+    width : 0%;
+    overflow-y: auto;
+    transition: width 0.5s;
+    z-index: 10;
+}
+
+#workingArea{
+    width:100%;
+    height:85%;
+    position:absolute;
+    float:left;
+    transition: width 0.5s;
+}
+
+#sliderPane{
+    float:right;
+    width:0%;
+    height:100%;
+    background-color:rgba(25, 37, 26, 0.62);
+    position:relative;
+    transition: width 0.5s;
+    z-index:100;
+}
+
+#signout, #signin, #dp {
+    top:15%;
+    float: right;
+    right: 2%;
+    display: none;
+}
+
+#menu{
+    top:85%;
+    float: right;
+    right: 2.5%;
+    position: fixed;
+    z-index: 100;
+}
+.btn-floating{
+    margin: 6px;
+}
+#edit_btn , #save{
+    float: right;
+}
+
+#menuDisplay, #profileDisplay{
+    color: white;
+    width: 100%;
+    overflow: hidden;
+}
+
+#profileDisplay{
+    font-family: 'Oxygen', sans-serif;
+    padding-top: 40%;
+    text-align: center;
+    display: none;
+}
+
+#menuDisplay{
+    font-family: 'Titillium Web', sans-serif;
+    width:100%;
+    padding-top: 35%;
+    text-align: center;
+    display: none;
+}
+
+#History, #Activity, #Profile{
+    padding-bottom: 10%;
+    cursor: pointer;
+}
+
+#Features, #Download, #About, #Support, #Feedback, #use{  
+    padding-top: 2%;
+    padding-bottom: 2%;
+    cursor: pointer;
+}
+
+#Features:hover, #Download:hover, #use:hover, #About:hover, #History:hover, #Activity:hover, #Support:hover,#Profile:hover, #Feedback:hover{
+    background-color:rgba(25, 37, 26, 0.60); 
+}
+
+#slide_image1, #slide_image2, #slide_image3 {
+    height: 100%;
+    float: right;
+}
+
+#FeaturesArea, #FeedbackArea, #DownloadArea, #SupportArea, #Usage_instruction{
+    height: 100%;
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    background-color: rgba(25, 37, 26, 0.60); 
+    display: none;
+    padding-top: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+#SupportArea,#Usage_instruction{
+    text-align: left;
+}
+h5{
+    text-align: center;
+}
+#FeedbackArea{
+    text-align: left;
+}
+#search_content, #share_content, #account_content { 
+    text-align: center;
+    float: left;
+    color: white;
+    align: center;
+    text-transform: capitalize;
+    padding-top: 10%;
+}
+
+#search_content h3 , #share_content h3, #account_content h3 {
+    font-family: 'Lora', serif;
+    text-align: center;
+}
+
+#search_content p , #share_content p, #account_content p {
+    color: rgba(255,255,255,0.5);
+    font-size: 1em;
+    width: 70%;
+    padding-top: 1%;
+    padding-left: 25%;
+    align-self: center;
+}
+
+#google, #Tathya {
+    margin-left: 3%;
+}
+
+
+ #Link, #Feedback_form, #Release_notes {
+    height : 95%;
+    width: 80%;
+    align-self: center;
+    align: center;
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+ #Release_notes,#Usage_instruction {
+    align: left;
+    color: white;
+ }
+#dtxt {
+    font-size: 2em;
+    color: white;
+    font-weight: 200;
+    align-self: center;
+    font-family: 'Play', sans-serif;
+}
+
+#dtxt1 {
+    font-size: 2em;
+    color: white;
+    font-weight: 200;
+    align: center;
+    font-family: 'Play', sans-serif;
+}
+#download {
+    align-self: center;
+    text-align: center;
+    width: 60%;
+    height: 20%;
+    font-size: 2em;
+    text-transform: capitalize;
+    background-color: rgba(0, 128, 2, 0.4);
+}
+
+@media screen and (max-width: 960px) {
+    #title {
+        font-size: 4em;
+    }
+    #subtitle {
+        font-size: 1em;
+    }
+    #menuDisplay, #profileDisplay {
+        font-size: 2.8em;
+    }
+    #search_textbox {
+        width: 50%;
+        font-size: 2em;
+    }
+    #signup, #signin {
+        width: 15%;
+    }
+    #location, #dept, #job, #linkdin, #contact, #email {
+        font-size: 1.5em;
+        width: 50%;
+        height: 34px;
+    }
+    #slide_image1, #slide_image2, #slide_image3 {
+        display: none;
+    }
+    #soliton {
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    #title {
+        font-size: 8.5em;
+    }
+    #subtitle {
+        font-size: 3em;
+    }
+    #menuDisplay, #profileDisplay {
+        font-size: 2.5em;
+    }
+    #search_textbox {
+        width: 30%;
+        font-size: 1em;
+    }
+    #location, #dept, #job, #linkdin, #contact, #email {
+        font-size: 1.3em;
+        width: 50%;
+        height: 34px;
+    }
+    #slide_image1, #slide_image2, #slide_image3 {
+        display: block;
+    }
+    #soliton {
+        font-size: 1em;
+    }
+}
+
+
+
+#title {
+    font-size-adjust: auto;
+    color:#FFFF00;
+    <!--
+    font-family: Harrington;
+    -->
+    font-weight: bolder;
+    position:inherit;
+    padding-left: 9%;
+    display: block;
+    top:25%;
+    left: 27%;
+    font-family: tathyaFont;
+}
+
+#subtitle{
+    font-size: 2em;
+    color: #FFFF00;
+    font-family: Harrington;
+    position:inherit;
+    padding-left: 10%;
+    display: block;
+    top:46%;
+    left: 25%;
+    -webkit-transform:scale(2,1);
+}
+
+
+#FeaturesTitle{
+    position: absolute;
+    font-size: 2.5em;
+    color: white;
+    width: 100%;
+}
+
+#page_nav {
+    margin-top: 5%;
+    margin-left: 15%;
+}
+.dropbutton {
+    /* main class */
+    height: 48px;
+    width: 200px;
+    font: bold 16px/48px arial;
+    margin-bottom: 60px;
+    position: relative;
+}
+.red1:first-child {
+    /* styling for the left part */
+    padding: 7px;
+    float: left;
+    height: 50px;
+    width: 35px;
+    /* border radius */
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+    /* backgorund */
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff9782), to(#d83c22));
+    background: -moz-linear-gradient(#ff9782, #d83c22);
+    background-color: #d83c22;
+    /* shadows and highlights */
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+    /* border */
+    border: 1px solid #c93f27;
+}
+
+.dropbutton:hover .red1:first-child {
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffbdb0), to(#ee6048));
+    background: -moz-linear-gradient(#ffbdb0, #ee6048);
+    background-color: #ee6048;
+}
+
+.dropbutton:active .red1:first-child {
+    background: -webkit-gradient(linear, left top, left bottom, from(#e75138), to(#ff7053));
+    background: -moz-linear-gradient(#e75138, #ff7053);
+    background-color: #ff9782;
+}
+
+.red1 {
+    /* styling for the right part */
+    height: 50px;
+    width: 155px;
+    float: left;
+    text-align: center;
+    /* border radius */
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+    /* backgorund */
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff9782), to(#d83c22));
+    background: -moz-linear-gradient(#ff9782, #d83c22);
+    background-color: #d83c22;
+    /* shadows and highlights */
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+    /* border */
+    border: 1px solid #c93f27;
+    border-left: 0;
+}
+
+.dropbutton:hover .red1 {
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffbdb0), to(#ee6048));
+    background: -moz-linear-gradient(#ffbdb0, #ee6048);
+    background-color: #ee6048;
+}
+
+.dropbutton:active .red1 {
+    background: -webkit-gradient(linear, left top, left bottom, from(#e75138), to(#ff7053));
+    background: -moz-linear-gradient(#e75138, #ff7053);
+    background-color: #ff9782;
+}
+
+.red1  a {
+    /* link styling */
+    color: #fbfbfb;
+    font: bold 16px/32px arial, helvetica, sans-serif;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #c93f27;
+}
+.blue:first-child {
+    /* styling for the left part */
+    padding: 7px;
+    float: left;
+    width: 32px;
+    height: 32px;
+    /* border radius */
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+    /* backgorund */
+    background: -webkit-gradient(linear, left top, left bottom, from(#87deff), to(#40a9fd));
+    background: -moz-linear-gradient(#87deff, #40a9fd);
+    background-color: #40a9fd;
+    /* shadows and highlights */
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+    /* border */
+    border: 1px solid #008af5;
+}
+
+.dropbutton:hover .blue:first-child {
+    background: -webkit-gradient(linear, left top, left bottom, from(#b1eaff), to(#68bcff));
+    background: -moz-linear-gradient(#b1eaff, #68bcff);
+    background-color: #68bcff;
+}
+
+.dropbutton:active .blue:first-child {
+    background: -webkit-gradient(linear, left top, left bottom, from(#68bcff), to(#87deff));
+    background: -moz-linear-gradient(#68bcff, #87deff);
+    background-color: #87deff;
+}
+
+.blue {
+    /* styling for the right part */
+    height: 50px;
+    width: 155px;
+    float: left;
+    text-align: center;
+    /* border radius */
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+    /* backgorund */
+    background: -webkit-gradient(linear, left top, left bottom, from(#87deff), to(#40a9fd));
+    background: -moz-linear-gradient(#87deff, #40a9fd);
+    background-color: #40a9fd;
+    /* shadows and highlights */
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+    /* border */
+    border: 1px solid #008af5;
+    border-left: 0;
+}
+
+.dropbutton:hover .blue {
+    background: -webkit-gradient(linear, left top, left bottom, from(#b1eaff), to(#68bcff));
+    background: -moz-linear-gradient(#b1eaff, #68bcff);
+    background-color: #68bcff;
+}
+
+.dropbutton:active .blue {
+    background: -webkit-gradient(linear, left top, left bottom, from(#68bcff), to(#87deff));
+    background: -moz-linear-gradient(#68bcff, #87deff);
+    background-color: #87deff;
+}
+
+.blue  a {
+    /* link styling */
+    color: #fbfbfb;
+    font: bold 16px/32px arial, helvetica, sans-serif;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #008af5;
+}
+.light1 {
+    width: 120px;
+    height: 31px;
+    padding: 7px 6px;
+    margin-left: 58px;
+    position: absolute;
+    clear: both;
+    z-index: -1;
+    -webkit-transition: top .6s linear;
+    /* text */
+    color: #333;
+    font: bold 12px/15px arial, helvetica, sans-serif;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+    /* border radius */
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+    /* backgorund */
+    background: -webkit-gradient(linear, left top, left bottom, from(#bababa), color-stop(.1, #e4e4e4), to(#f2f2f2));
+    background: -moz-linear-gradient(#bababa, #e4e4e4 10%, #f2f2f2);
+    background-color: #ccc;
+    /* shadows and highlights */
+    -webkit-box-shadow: 0 1px -1px rgba(255, 255, 255, 1) inset;
+    -moz-box-shadow: 0 -1px 1px rgba(255, 255, 255, 1) inset;
+    box-shadow: 0 1px -1px rgba(255, 255, 255, 0.8) inset;
+    /* border */
+    border: 1px solid #bbb;
+    border-top: 0;
+}
+
+.dropbutton:hover .light { top: 48px }
+
+.light1 img { float: left }
+
+.light1 span {
+    color: #555;
+    font-weight: normal;
+}

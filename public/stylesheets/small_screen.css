@@ -1,0 +1,173 @@
+html, body{
+    height:100%;
+    width:100%;
+    margin:0px;
+    overflow-y: hidden;
+}
+
+body {
+    background-image:url('../images/books.jpg');
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+.head {
+    background-color:rgba(215, 186, 174, 0.48);
+    height:12%;
+    border-bottom: 1px solid white;
+}
+
+#title {
+        font-size-adjust: auto;
+}
+
+#search_textbox {
+    width : 60%;
+    font-size: 2em;
+    border:none;
+    outline: none;
+    padding: 0;
+    border-bottom: 3px solid white;
+    text-decoration-color: white;
+    background-color: transparent;  
+}
+
+#icon {
+     margin:1%;
+}
+
+#mainArea{
+    height:88%;
+    background-color: rgba(25, 37, 26, 0.40); 
+}
+
+#dp {
+    margin-top: 0.8%;
+    width : 4%;
+    height : 50%;
+    display: none;
+}
+
+#results {
+    background-color: rgba(255,255,255,0.75);
+    display: block;
+    float: left;
+    height: 100%;
+    width : 0%;
+    overflow-y: auto;
+    transition: width 0.5s;
+    z-index: 10;
+}
+
+#workingArea{
+    width:100%;
+    height:88%;
+    position:absolute;
+    float:left;
+    transition: width 0.5s;
+}
+
+#sliderPane{
+    float:right;
+    width:0%;
+    height:100%;
+    background-color:rgba(25, 37, 26, 0.62);
+    position:relative;
+    transition: width 0.5s;
+    z-index:100;
+}
+
+#signout, #signin, #dp {
+    top:15%;
+    float: right;
+    right: 2%;
+    width:15%;
+    font-size: 1em;
+    display: none;
+}
+
+#menu{
+    top:88%;
+    float: right;
+    right: 2.5%;
+    position: fixed;
+    z-index: 100;
+}
+
+#menuDisplay, #profileDisplay{
+    color: white;
+    width: 100%;
+    overflow: hidden;
+}
+
+#profileDisplay{
+    font-family: Papyrus, fantasy;
+    padding-top: 40%;
+    text-align: center;
+    font-size: 3.5em;
+    display: none;
+}
+
+#menuDisplay{
+    font-family:Papyrus, fantasy;
+    width:100%;
+    padding-top: 35%;
+    text-align: center;
+    font-size: 2.5em;
+    display: none;
+}
+
+#History, #Activity, #Profile{
+    padding-bottom: 10%;
+    cursor: pointer;
+}
+
+#Features, #Download, #About, #Support, #Feedback{  
+    padding-top: 2%;
+    padding-bottom: 2%;
+    cursor: pointer;
+}
+
+#Features:hover, #Download:hover, #About:hover, #History:hover, #Activity:hover, #Support:hover,#Profile:hover, #Feedback:hover{
+    background-color:rgba(25, 37, 26, 0.60); 
+}
+
+#FeaturesArea, #AboutArea, #FeedbackArea, #DownloadArea, #SupportArea{
+    height: 100%;
+    width: 100%;
+    align-self: center;
+    background-color: rgba(25, 37, 26, 0.60); 
+    display: none;
+    padding-top: 3%;
+}
+
+
+
+#title {
+    font-size:2.5em;
+    font-size-adjust: auto;
+    color:#FFFF00;
+    font-family: Harrington;
+    font-weight: bolder;
+    position: relative;
+    padding-left: 9%;
+    display: block;
+}
+
+#subtitle{
+    font-size: 0.5em;
+    color: #FFFF00;
+    font-family: Harrington;
+    font-weight: bolder;
+    position: relative;
+    padding-left: 10%;
+    display: block;
+}
+
+
+#page_nav {
+    margin-top: 5%;
+    margin-left: 15%;
+}
+
