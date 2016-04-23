@@ -1,0 +1,107 @@
+        #full{
+            padding: 2px;
+        }
+        body { 
+            min-width: 280px; 
+            overflow-x: hidden;
+            position:inherit;
+            font-size: 12px; 
+            border: 1px;
+            border-color: 
+            margin:1px;
+            border-style: hidden;
+            background-color: rgb(239, 241, 247);
+            padding:2px;
+        }
+        #textboxcontent {
+            margin-right: 10px;
+            border-style: none;
+            border: solid 1px;
+            background: white; 
+            border: 1px solid #DDD; 
+            border-radius: 5px; 
+            box-shadow: 0 0 5px #DDD inset; 
+            color: #666; 
+            outline: none; 
+            width: 170px;  
+            height: 22px
+        }
+        button{        
+            text-align: center;
+            border-style: none;
+            border: solid 1px;
+            background: white; 
+            border: 1px solid #DDD; 
+            border-radius: 5px; 
+            box-shadow: 0 0 5px #DDD inset; 
+            color: #666; 
+            outline: none; 
+            background-repeat:no-repeat;
+            cursor:pointer;
+            overflow: hidden;
+        }
+        #savepage{
+            font-family: 'Nova Mono';
+            text-align: center;
+            font-weight: 550;
+            font-size: 14px;
+        }
+        
+        #buttons{
+            text-align: center;
+        }
+        a{
+            text-transform: capitalize;
+            height: 20px;
+            width: auto;
+        }
+        #submit{
+            border: 2px solid #DDD;
+            background-color: rgb(239, 241, 247);
+            width: 80px;
+            height: 24px;
+        }
+        #status{
+            min-height: 20px;
+        }
+        .inbuttons{
+            font-family: 'Patrick Hand', cursive;
+            
+        }
+        #user{
+            padding: 5px;
+            float: left;
+            width: 40%;
+            text-align: right;
+        }
+        #key{
+            background-color: rgb(239, 241, 247);
+            padding-right: 3px;
+        }
+        #logo{
+            width: 45%;
+            float: left;
+        }
+        #sign{
+            padding: 3px;
+            float: left;
+            width: 12%;
+            text-align: right;
+        }
+        #add_tags{
+            margin-bottom: 3px;   
+        }
+        #selectedtags{
+            height: 40%;
+        }
+        #username{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+        }
+        .spanclass{
+            display: inline-block;
+            font-size: 12px;
+        }
+        #contents{
+            text-align: center;
+        }
